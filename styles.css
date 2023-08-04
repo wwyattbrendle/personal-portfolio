@@ -1,8 +1,18 @@
-img#hero-img {
+img.hero-img {
+    max-width: 100%;
 }
 
 img.github-icon {
     max-width: 50px;
+}
+
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style-type: none;
 }
 
 button.github-button {
@@ -15,4 +25,10 @@ button.github-button {
 
 img.github-icon-button {
     max-width: 15px;
+}
+
+@media (min-width: 1024px) {
+    img.hero-img {
+        max-height: 700px;
+    }
 }

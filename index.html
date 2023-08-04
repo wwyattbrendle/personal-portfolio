@@ -8,7 +8,14 @@
 </head>
 <body>
     <div class="hero">
-        <img src="3" alt="#" id="hero-img">
+        <picture>
+            <source media="(min-width: 1024px)"
+                    srcset="./assets/images/pexels-lisa-fotios-large.jpg">
+            <source media="(min-width: 640px)"
+                    srcset="./assets/images/pexels-lisa-fotios-medium.jpg">
+            <source srcset="./assets/images/pexels-lisa-fotios-small.jpg">
+            <img class="hero-img" src="./assets/images/pexels-lisa-fotios-small.jpg" alt="man at desk with two computer screens">
+        </picture>
         <h1>Wyatt Brendle</h1>
     </div>
     <div class="about-me">
@@ -26,10 +33,13 @@
             <div class="project">
                 <img src="#" alt="">
                 <h3>Project name</h3>
-                <p>short description</p>
+                <p>short description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod inventore ab tenetur.</p>
                 <ul class="project-links">
-                    <li>
+                    <li class="list-link">
                         <a href="#">Live Preview</a>
+                    </li>
+                    <li class="list-link">
+                        <a href="#">View Code</a>
                     </li>
                 </ul>
             </div>
