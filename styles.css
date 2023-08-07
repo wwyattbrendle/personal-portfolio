@@ -209,7 +209,7 @@ div.contact-text > p{
         background-color: whitesmoke;
     }
 
-    div.icon-container{
+    div.icon-container.top{
         display: none;
     }
 
@@ -220,11 +220,36 @@ div.contact-text > p{
         color: whitesmoke;
         text-shadow: 0px 0px 10px black;
     }
+
+    div.hero {
+        padding: 0;
+    }
+
+    img.contact-me-img{
+        max-height: 600px;
+    }
 }
 
 @media (min-width: 1024px) {
     img.hero-img {
         max-height: 700px;
     }
+
+    div.main, div.work, div.contact-wrapper{
+        padding: 3rem;
+        max-width: 1200px;
+    }
+
+    div.wrapper{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 76.2%, var(--accent-color) 76.2%, var(--accent-color) 100%);
+    }
+
+    div.icon-container.top{
+        display: flex;
+    }
+
 
 }
