@@ -179,7 +179,7 @@ div.contact-text > p{
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
-    div.work, div.main, div.about-me{
+    div.work, div.main{
         margin: 2.2rem;
     }
 
@@ -212,10 +212,19 @@ div.contact-text > p{
     div.icon-container{
         display: none;
     }
+
+    h1#name {
+        position: relative;
+        top: -4rem;
+        left: 1rem;
+        color: whitesmoke;
+        text-shadow: 0px 0px 10px black;
+    }
 }
 
 @media (min-width: 1024px) {
     img.hero-img {
         max-height: 700px;
     }
+
 }
