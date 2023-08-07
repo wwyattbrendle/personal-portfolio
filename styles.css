@@ -39,13 +39,14 @@ p.reach-out{
 
 body{
    background-color:whitesmoke;
+   background: linear-gradient(148deg, var(--accent-color) 8%, rgba(0, 0, 0, 0) 8%);
 }
 
-div.hero, div.about-me, div.work, div.contact-me{
+div.about-me, div.work, div.contact-me, div.hero{
     padding: 1.3rem;
 }
 
-div.about-me, div.work, div.contact-me{
+div.work, div.contact-wrapper{
     margin-top: 4rem;
 }
 
@@ -55,10 +56,6 @@ div.about-me, div.work, div.contact-me{
 
 img.hero-img {
     max-width: 100%;
-}
-
-picture{
-    max-width: calc(100% - 2rem);
 }
 
 img.project-img {
@@ -71,12 +68,12 @@ img.icon {
 
 img.arrow {
     max-width: 1rem;
-    transition: transform .25s ease-in .2s;
+    transition: transform .1s ease-in .1s;
 }
 
 a.fake-span {
     display: flex;
-    transition: transform .25s ease-out .2s;
+    transition: transform .1s ease-out .1s;
 }
 
 a.fake-span:hover {
@@ -110,7 +107,7 @@ ul{
 }
 
 li.list-link {
-    min-width: 6.5rem;
+    min-width: 45%;
 }
 
 div.about-me > p{
@@ -139,13 +136,6 @@ div.p-content{
     gap: .75rem;
 }
 
-div.hero{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(148deg, var(--accent-color) 60%, rgba(0, 0, 0, 0) 60%);
-}
-
 div.icon-container{
     display: flex;
     justify-content: center;
@@ -155,8 +145,9 @@ div.icon-container{
 
 ul.project-links{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: .75rem;
+    width: 100%;
 }
 
 h3.project-title{
@@ -164,7 +155,7 @@ h3.project-title{
     font-size: 1.7rem;
 }
 
-div.contact-me{
+div.contact-wrapper {
     background-color: var(--accent-color);
     color: whitesmoke;
 }
@@ -180,10 +171,47 @@ div.contact-text > p{
     color: inherit;
 }
 
-div.about-me{
-    display: flex;
-    flex-direction: column;
-    gap:2rem;
+/* Tablet Below */
+@media (min-width: 640px) {
+
+    div#projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    div.work, div.main, div.about-me{
+        margin: 2.2rem;
+    }
+
+    div.contact-me {
+        padding: none;
+    }
+
+    div.contact-wrapper {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 50% 45%;
+        column-gap: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    body{
+        background: linear-gradient(165deg, var(--accent-color) 13%, rgba(0, 0, 0, 0) 13%);
+    }
+
+    div.about-me{
+        box-shadow: 1px 1px 2px 3px lightgrey;
+        background-color: whitesmoke;
+    }
+
+    div.icon-container{
+        display: none;
+    }
 }
 
 @media (min-width: 1024px) {
